@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.32); }
+
+/* Reusable utility: shimmer placeholder */
+.shimmer {
+  background: linear-gradient(90deg, rgba(0,0,0,0.04), rgba(0,0,0,0.10), rgba(0,0,0,0.04));
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* RB-themed paper grain background overlay */
+.rb-grain {
+  position: relative;
+}
+.rb-grain::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(59,36,23,0.08) 1px, transparent 1px);
+  background-size: 4px 4px;
+  pointer-events: none;
+}
+
+/* HW-themed terrazzo dot accents */
+.hw-dots {
+  background-image: radial-gradient(rgba(124,139,92,0.18) 1.5px, transparent 1.5px),
+                    radial-gradient(rgba(197,107,77,0.14) 1px, transparent 1px);
+  background-size: 28px 28px, 18px 18px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Sushi: brush stroke */
+.sushi-brush {
+  background-image:
+    linear-gradient(180deg, transparent 50%, rgba(183, 50, 37, 0.06) 50%);
+  background-size: 100% 8px;
+}
+
+/* Beauty: pearl iridescent */
+.beauty-iridescent {
+  background:
+    linear-gradient(135deg, #FFF5F8 0%, #FCE4EC 30%, #F8C8DC 60%, #FFF5F8 100%);
+}
+
+/* Bakery: soft sprinkle pattern */
+.bakery-sprinkles {
+  background-image:
+    radial-gradient(circle at 20% 30%, #F4A6A6 2px, transparent 2.5px),
+    radial-gradient(circle at 60% 70%, #B6E3D4 2px, transparent 2.5px),
+    radial-gradient(circle at 80% 20%, #F7B5CA 2px, transparent 2.5px),
+    radial-gradient(circle at 30% 80%, #FBE7C6 2px, transparent 2.5px);
+  background-size: 80px 80px;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }

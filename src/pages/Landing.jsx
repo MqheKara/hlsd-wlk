@@ -85,7 +85,7 @@ export default function Landing() {
             ))}
           </div>
 
-          {/* "Two doors." anchored to RB's outer (left) edge */}
+          {/* "Two doors." anchored to RB's outer (left) edge
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -98,9 +98,9 @@ export default function Landing() {
             <div className="text-rb-cream font-rb_serif italic text-3xl md:text-5xl lg:text-6xl drop-shadow-md leading-none">
               Two doors.
             </div>
-          </motion.div>
+          </motion.div> */}
 
-          <div className="relative h-full flex flex-col justify-end p-8 md:p-12 lg:p-20 text-rb-cream">
+          <div className="relative h-full flex flex-col justify-end p-8 md:p-8 lg:p-10 text-rb-cream">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -170,7 +170,7 @@ export default function Landing() {
           </div>
 
           {/* "One destination." anchored to HW's outer (right) edge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -182,9 +182,9 @@ export default function Landing() {
             <div className="text-hw-cream font-hw_display italic text-3xl md:text-5xl lg:text-6xl drop-shadow-md leading-none">
               One destination.
             </div>
-          </motion.div>
+          </motion.div> */}
 
-          <div className="relative h-full flex flex-col justify-end p-8 md:p-12 lg:p-20 text-hw-cream">
+          <div className="relative h-full flex flex-col justify-end p-8 md:p-8lg:p-10 text-hw-cream">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -205,7 +205,7 @@ export default function Landing() {
               </p>
               <Link
                 to="/hw"
-                className="group mt-8 inline-flex items-center gap-3 bg-hw-terracotta text-hw-cream px-7 py-3.5 rounded-full font-hw_sans font-medium tracking-wide hover:bg-hw-cream hover:text-hw-forest transition-all duration-300 hover:gap-5"
+                className="group mt-8 inline-flex items-center gap-3 bg-hw-terracotta text-hw-cream px-7 py-3.5 rounded-full font-hw_sans font-medium tracking-wide hover:bg-hw-cream hover:text-hw-forest transition-all duration-300 hover:gap-2"
               >
                 Take a walk
                 <ArrowRight
